@@ -31,6 +31,13 @@ jobs:
             lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev \
             libgl1-mesa-dev libxml2-utils xsltproc unzip kpartx python3-mako python-is-python3
 
+      - name: Install repo tool
+        run: |
+          mkdir -p ~/bin
+          curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+          chmod a+x ~/bin/repo
+          echo "export PATH=\$PATH:~/bin" >> $GITHUB_ENV
+
       - name: Initialize repo
         run: |
           mkdir -p android-tv
