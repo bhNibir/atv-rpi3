@@ -42,7 +42,7 @@ jobs:
         run: |
           mkdir -p android-tv
           cd android-tv
-          repo init -u git://github.com/LineageOS/android.git -b cm-14.1
+          repo init -u https://github.com/LineageOS/android.git -b cm-14.1
           curl --create-dirs -L -o .repo/local_manifests/manifest_brcm_rpi3.xml \
             -O -L https://raw.githubusercontent.com/bhnibir/android-tv-build/cm-14.1/manifest_brcm_rpi3.xml
 
