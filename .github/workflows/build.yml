@@ -37,6 +37,7 @@ jobs:
           curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
           chmod a+x ~/bin/repo
           echo "export PATH=\$PATH:~/bin" >> $GITHUB_ENV
+          source ~/bin
 
       - name: Initialize repo
         run: |
